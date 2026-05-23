@@ -57,7 +57,7 @@
   - Розмір (для файлів, у зручному форматі: B / KB / MB / GB)
   - Дата останньої модифікації (локалізована: дд.мм.рррр гг:хх)
 
-### 7. Статистика пам'яті пристрою (на головному екрані)
+### 7. Статистика пам'яті пристрою
 - Відображається у верхній частині екрану (iOS/Android)
 - Три картки з показниками:
   - Всього: загальний обсяг пам'яті пристрою
@@ -79,7 +79,10 @@
 | FileSystem.getTotalDiskCapacityAsync() | Загальний обсяг пам'яті |
 | FileSystem.getFreeDiskStorageAsync() | Вільний обсяг пам'яті |
 
----
-
 ## Скріншоти
 
+<img width="450" height="847" alt="44671 (1)" src="https://github.com/user-attachments/assets/58f771a5-9755-4abc-850b-31c39e174126" />
+<img width="417" height="845" alt="44671 (4)" src="https://github.com/user-attachments/assets/8e066655-1128-438d-b585-4607c766ba97" />
+<img width="415" height="835" alt="44671 (3)" src="https://github.com/user-attachments/assets/2eb1e353-46dc-4c1c-b538-ae5cc7f555ff" />
+<img width="434" height="852" alt="44671 (2)" src="https://github.com/user-attachments/assets/13b32f22-e8a5-47a3-87c1-a38d91f81863" />
+<img width="419" height="839" alt="7799" src="https://github.com/user-attachments/assets/7929d756-3e17-4865-a964-ff51380e054f" />
