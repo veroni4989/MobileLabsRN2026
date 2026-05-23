@@ -47,7 +47,10 @@
 
 
 ## Скріншоти
-**
+*<img width="490" height="850" alt="33444 (2)" src="https://github.com/user-attachments/assets/e121f2c1-83b6-45c6-8b2f-f69958632ed2" />
+<img width="511" height="857" alt="33444 (1)" src="https://github.com/user-attachments/assets/981cd618-4821-4e57-82e5-887ef3a91e84" />
+<img width="498" height="851" alt="189" src="https://github.com/user-attachments/assets/13e08c0f-cb21-425f-aa90-8b62147e02b2" />
+*
 
 ---
 
