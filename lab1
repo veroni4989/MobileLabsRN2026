@@ -1,1 +1,114 @@
+import React from 'react';
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  SafeAreaView,
+} from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { Ionicons } from '@expo/vector-icons';
 
+import HomeScreen from './screens/HomeScreen';
+import GalleryScreen from './screens/GalleryScreen';
+import ProfileScreen from './screens/ProfileScreen';
+
+const Tab = createMaterialTopTabNavigator();
+const STUDENT_NAME = 'Казмірчук Вероніка Володимирівна, ЗІПЗ-23-1';
+
+function AppHeader() {
+  return (
+    <View style={styles.header}>
+      <Image
+        source={{ uri: 'https://ztu.edu.ua/images/logo.png' }}
+        style={styles.logo}
+        resizeMode="contain"
+      />
+      <Text style={styles.headerTitle}>FirstMobileApp</Text>
+      <View style={styles.headerRight} />
+    </View>
+  );
+}
+
+function AppFooter() {
+  return (
+    <View style={styles.footer}>
+      <Text style={styles.footerText}>{STUDENT_NAME}</Text>
+    </View>
+  );
+}
+
+function TabIcon({ route, color }) {
+  let iconName = 'home';
+  if (route.name === 'Фотогалерея') iconName = 'images';
+  if (route.name === 'Профіль') iconName = 'person';
+  return <Ionicons name={iconName} size={20} color={color} />;
+}
+
+export default function App() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <AppHeader />
+      <NavigationContainer>
+        <Tab.Navigator
+          screenOptions={({ route }) => ({
+            tabBarIcon: ({ color }) => <TabIcon route={route} color={color} />,
+            tabBarActiveTintColor: '#007AFF',
+            tabBarInactiveTintColor: '#8e8e93',
+            tabBarIndicatorStyle: { backgroundColor: '#007AFF' },
+            tabBarStyle: { backgroundColor: '#f8f8f8', elevation: 0 },
+            tabBarShowIcon: true,
+            tabBarLabelStyle: { fontSize: 11 },
+          })}
+        >
+          <Tab.Screen name="Головна" component={HomeScreen} />
+          <Tab.Screen name="Фотогалерея" component={GalleryScreen} />
+          <Tab.Screen name="Профіль" component={ProfileScreen} />
+        </Tab.Navigator>
+      </NavigationContainer>
+      <AppFooter />
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    backgroundColor: '#fff',
+    borderBottomWidth: 0.5,
+    borderBottomColor: '#ddd',
+  },
+  logo: {
+    width: 60,
+    height: 40,
+  },
+  headerTitle: {
+    fontSize: 17,
+    fontWeight: 'bold',
+    color: '#000',
+  },
+  headerRight: {
+    width: 60,
+  },
+  footer: {
+    padding: 8,
+    alignItems: 'center',
+    borderTopWidth: 0.5,
+    borderTopColor: '#ddd',
+    backgroundColor: '#fff',
+  },
+  footerText: {
+    fontStyle: 'italic',
+    color: '#666',
+    fontSize: 12,
+  },
+});
